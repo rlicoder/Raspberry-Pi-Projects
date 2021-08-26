@@ -1338,3 +1338,4 @@ bk 38bq 33bn 25bp 36bp 13wk 72
 bk 38bq 33bn 25bp 36bp 12wk 62
 bk 38bq 33bn 25bp 3611 bqwk 72
 bk 38bq 33bn 25bp 36bq 12wk 82
+br 88bn 78bb 68bk 58bq 48bb 38bn 28br 18bp 87bp 77bp 67bp 57bp 47bp 37bp 27bp 17wp 82wp 72wp 62wp 52wp 42wp 32wp 22wp 12wr 81wn 71wb 61wk 51wq 41wb 31wn 21wr 11

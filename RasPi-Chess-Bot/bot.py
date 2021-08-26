@@ -6,26 +6,30 @@ from parse import *
 import random
 from selenium import webdriver
 from selenium.common.exceptions import *
+from selenium.webdriver.chrome.options import Options
 #from selenium.common.exceptions import NoSuchElementException
 #from selenium.common.exceptions import StaleElementReferenceException
 
-bot = webdriver.Chrome()
-options = webdriver.ChromeOptions()
-options.add_experimental_option("excludeSwitches", ["enable-automation"])
-options.add_experimental_option('useAutomationExtension', False)
-options.add_argument("--disable-blink-features=AutomationControlled")
-driver = webdriver.Chrome(options=options)
+ops = Options()
+ops.add_argument('--user-agent=nigerundayo')
+#ops = webdriver.ChromeOptions()
+ops.add_experimental_option("excludeSwitches", ["enable-automation"])
+ops.add_experimental_option('useAutomationExtension', False)
+ops.add_argument("--disable-blink-features=AutomationControlled")
+#driver = webdriver.Chrome(options=options, )
+bot = webdriver.Chrome(executable_path='/home/royce/Desktop/Raspberry-Pi-Projects/RasPi-Chess-Bot/chromedriver', options=ops)
 bot.set_page_load_timeout(20)
 
-bot.get('https://www.chess.com/home')
-email = bot.find_element_by_xpath('//*[@id="username"]')
-email.send_keys('MiniMaxer')
-passw = bot.find_element_by_xpath('//*[@id="password"]')
-passw.send_keys('HPziac9W4JRiwkE')
-signin = bot.find_element_by_xpath('//*[@id="login"]')
-signin.click()
+#bot.get('https://www.chess.com/home')
+#email = bot.find_element_by_xpath('//*[@id="username"]')
+#email.send_keys('MiniMaxer')
+#passw = bot.find_element_by_xpath('//*[@id="password"]')
+#passw.send_keys('HPziac9W4JRiwkE')
+#signin = bot.find_element_by_xpath('//*[@id="login"]')
+#signin.click()
 
-time = input("time control?")
+go = input("have you logged in?")
+time = input("time control and are you ready to start?")
 cont = "New " + time + " min"
 
 while (cont != 'q'):
